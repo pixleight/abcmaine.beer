@@ -1,0 +1,14 @@
+{
+  "name": "abcmaine.beer",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Chris Violette <chris@pixleight.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "normalize-css": "~4.1.1"
+  },
+  "overrides": {}
+}
