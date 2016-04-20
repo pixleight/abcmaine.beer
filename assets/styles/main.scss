@@ -1,14 +1,25 @@
+$airlineYellow: #fec524;
+
 body {
-  background: #FBBC31;
+  background: $airlineYellow;
+}
+
+a {
+  color: #000;
+  transition: color 0.15s ease-out;
+
+  &:hover {
+    color: #FFF;
+  }
 }
 
 ::selection {
   background: #000;
-  color: #FBBC31;
+  color: $airlineYellow;
 }
 ::-moz-selection {
   background: #000;
-  color: #FBBC31;
+  color: $airlineYellow;
 }
 
 $mobileBreakpoint: 480px;
@@ -133,6 +144,24 @@ h2 {
   @media (max-width: $mobileBreakpoint){
     font-size: 1.25em;
   }
+}
+
+.keeptabs {
+  margin-top: 1em;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.25em;
+
+  .fa {
+    font-size: 1.5em;
+  }
+
+  animation-duration: 0.5s;
+  animation-delay: 2.75s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-name: fadeInUp;
 }
 
 .locations {
