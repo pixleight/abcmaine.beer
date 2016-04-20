@@ -2,14 +2,14 @@
   "name": "abcmaine.beer",
   "version": "0.1.0",
   "author": "Chris Violette <chris@pixleight.com>",
-  "homepage": "https://roots.io/sage/",
+  "homepage": "http://pixleight.github.io/abcmaine.beer/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "git://github.com/pixleight/abcmaine.beer.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/pixleight/abcmaine.beer/issues"
   },
   "licenses": [
     {
