@@ -1,0 +1,153 @@
+body {
+  background: #FBBC31;
+}
+
+::selection {
+  background: #000;
+  color: #FBBC31;
+}
+::-moz-selection {
+  background: #000;
+  color: #FBBC31;
+}
+
+header {
+  background: #4a4846 url('../images/beers-bg-2.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  z-index: -1;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  margin: 100px 0;
+  box-shadow: 0 0 25px 5px rgba(#000, 0.3);
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 300px;
+  top: -50px;
+  margin: auto;
+
+  span {
+    display: block;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    background: none, url('../images/logo-blade@2x.png') 0 0 no-repeat;
+    background-size: contain;
+
+    animation-duration: 1.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-name: bladeRotate;
+    animation-timing-function: ease-out;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    z-index: 2;
+    position: absolute;
+    width: 295px;
+    height: 295px;
+    top: 75px;
+    left: 70px;
+    background: none, url('../images/logo-glass@2x.png') 0 0 no-repeat;
+    background-size: contain;
+
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    animation-timing-function: ease-out;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-name: fadeInUp;
+}
+
+.lede {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-name: fadeInUp;
+}
+
+.locations {
+  display: flex;
+  justify-content: center;
+
+  animation-duration: 0.5s;
+  animation-delay: 2.75s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-name: fadeInUp;
+
+  p {
+    flex-basis: 300px;
+    font-size: 1.5em;
+    margin: 0.5em;
+    text-align: center;
+    font-family: "Bitter", sans-serif;
+    font-weight: 700;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes bladeRotate {
+  0% {
+      opacity: 0;
+      transform: translate3d(0,25%,0) rotate(-90deg);
+  }
+  100% {
+      opacity: 1;
+      transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,25%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
