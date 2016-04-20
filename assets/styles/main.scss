@@ -11,6 +11,8 @@ body {
   color: #FBBC31;
 }
 
+$mobileBreakpoint: 480px;
+
 header {
   background: #4a4846 url('../images/beers-bg-2.jpg') 50% 50% no-repeat;
   background-size: cover;
@@ -19,6 +21,9 @@ header {
   border-bottom: 1px solid #FFF;
   margin: 100px 0;
   box-shadow: 0 0 25px 5px rgba(#000, 0.3);
+  @media (max-width: $mobileBreakpoint){
+    height: 200px;
+  }
 }
 
 h1 {
@@ -28,6 +33,19 @@ h1 {
   height: 300px;
   top: -50px;
   margin: auto;
+
+  @media (max-width: $mobileBreakpoint){
+    top: -50px;
+    max-width: 80%;
+    background: url(../images/logo-full@2x.png) 50% 50% no-repeat;
+    background-size: contain;
+
+    animation-duration: 1.25s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    animation-timing-function: ease-out;
+  }
 
   span {
     display: block;
@@ -53,6 +71,10 @@ h1 {
     animation-fill-mode: both;
     animation-name: bladeRotate;
     animation-timing-function: ease-out;
+
+    @media (max-width: $mobileBreakpoint){
+      display: none;
+    }
   }
 
   &:after {
@@ -72,6 +94,10 @@ h1 {
     animation-fill-mode: both;
     animation-name: fadeIn;
     animation-timing-function: ease-out;
+
+    @media (max-width: $mobileBreakpoint){
+      display: none;
+    }
   }
 }
 
@@ -86,6 +112,10 @@ h2 {
   animation-fill-mode: both;
   animation-timing-function: ease-out;
   animation-name: fadeInUp;
+
+  @media (max-width: $mobileBreakpoint){
+    font-size: 1.75em;
+  }
 }
 
 .lede {
@@ -99,6 +129,10 @@ h2 {
   animation-fill-mode: both;
   animation-timing-function: ease-out;
   animation-name: fadeInUp;
+
+  @media (max-width: $mobileBreakpoint){
+    font-size: 1.25em;
+  }
 }
 
 .locations {
@@ -118,6 +152,10 @@ h2 {
     text-align: center;
     font-family: "Bitter", sans-serif;
     font-weight: 700;
+
+    @media (max-width: $mobileBreakpoint){
+      font-size: 1em;
+    }
   }
 }
 
