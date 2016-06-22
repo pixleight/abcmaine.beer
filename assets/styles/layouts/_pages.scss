@@ -1,0 +1,94 @@
+
+.beer-list {
+  padding: 15px 30px;
+  background: #424242 url(../images/chalkboard-bg.jpg) top center no-repeat;
+  background-size: cover;
+  font-family: "Rock Salt";
+  color: $beer-list--white;
+  font-size: 1.2em;
+  position: relative;
+
+  h3 {
+    margin: 0 0 1.2em;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.beer-list--view-all {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  transform: rotate(-5deg);
+  font-size: 1.25em;
+  @media (max-width: $screen-xs-max) {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+    text-align: center;
+  }
+}
+  .beer-list--view-all-text {
+    float: left;
+    width: 7.25em;
+    text-align: center;
+    line-height: 1;
+    @media (max-width: $screen-xs-max) {
+      float: none;
+      width: auto;
+    }
+  }
+  .beer-list--view-all-arrow {
+    float: right;
+    font-size: 1.5em;
+    @media (max-width: $screen-xs-max) {
+      float: none;
+      font-size: 1em;
+      margin-left: 0.5em;
+    }
+  }
+
+.beer-list--white{ color: $beer-list--white; }
+.beer-list--red{ color: $beer-list--red; }
+.beer-list--orange{ color: $beer-list--orange; }
+.beer-list--yellow{ color: $beer-list--yellow; }
+.beer-list--green{ color: $beer-list--green; }
+.beer-list--blue{ color: $beer-list--blue; }
+.beer-list--purple{ color: $beer-list--purple; }
+
+  .beer-list--row {
+    margin-bottom: 1em;
+    line-height: 1.75em;
+  }
+
+  .beer-list--header {
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgba($beer-list--white, 0.8);
+  }
+
+  .beer-list--title {
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: $brand-primary;
+      }
+    }
+  }
+
+  .beer-list--description {
+    color: $beer-list--white;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+  }
+
+  .beer--featured-image {
+    width: auto;
+    margin: 0 auto 15px;
+  }

@@ -31,3 +31,21 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+function set_custom_edit_beer_columns($columns) {
+  unset($columns['date']);
+  $columns['on_tap'] = __( 'On Tap', 'sage' );
+  $columns['date'] = __( 'Date', 'sage' );
+  return $columns;
+}
+
+function custom_beer_columns( $column, $post_id ) {
+	switch ( $column ) {
+		case 'on_tap':
+			echo join(', ', get_post_meta( $post_id, 'on_tap', true ) );
+			break;
+	}
+}
+
+add_filter( 'manage_beer_posts_columns', __NAMESPACE__ . '\\set_custom_edit_beer_columns' );
+add_action( 'manage_beer_posts_custom_column' , __NAMESPACE__ . '\\custom_beer_columns', 10, 2 );

@@ -1,0 +1,32 @@
+.beer--archive {
+  article {
+    margin-bottom: 1em;
+  }
+
+  .beer--title {
+    font-family: "Rock Salt";
+    a:hover {
+      color: $beer-list--white;
+      text-decoration: none;
+    }
+  }
+
+  .beer--styles {
+    font-family: "Rock Salt";
+    color: $beer-list--white;
+    margin-bottom: 1em;
+  }
+
+  .beer--details {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+}
+
+.beer--single {
+  .beer--styles {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}
