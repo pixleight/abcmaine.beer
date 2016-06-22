@@ -36,5 +36,12 @@ $beer-list--purple:     #D1C4E9;
 $font-family-sans-serif: "Roboto Slab", "Helvetica Neue", Helvetica, sans-serif;
 $headings-font-weight:  400;
 
+$font-size-base:        14px;
+
 // Components
 $border-radius-base:    0;
+
+// Shadows
+$shadow-key-umbra-opacity: 0.2 !default;
+$shadow-key-penumbra-opacity: 0.14 !default;
+$shadow-ambient-shadow-opacity: 0.12 !default;
