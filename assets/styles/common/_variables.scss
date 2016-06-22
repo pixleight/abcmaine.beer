@@ -5,6 +5,13 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$menu-sidebar-sm-columns:  3;
+$main-sm-columns:          12-$menu-sidebar-sm-columns;
+$menu-sidebar-md-columns:  2;
+$main-md-columns:          12-$menu-sidebar-md-columns;
+
+$mobile-menu-height:       72px;
+
 // Colors
 $brand-primary:         #FDC625;
 $body-bg:               #212121;

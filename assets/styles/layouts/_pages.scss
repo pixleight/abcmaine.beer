@@ -1,3 +1,57 @@
+.page-header {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #212121 url(../images/headline-bg_default.jpg) 50% 50% no-repeat;
+  background-size: cover;
+
+  > * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    text-transform: uppercase;
+    color: #212121;
+    font-size: floor(($font-size-base * 2.6));
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 15px 30px;
+    background: rgba($brand-primary, 0.65);
+  }
+}
+
+.featured-image {
+  width: 50%;
+  margin: 0 -30px 15px 15px;
+  float: right;
+
+  @media (max-width: $screen-xs-max) {
+    float: none;
+    margin: 0 auto 15px;
+    width: auto;
+  }
+}
+
+.content-page {
+  padding: 30px;
+}
+
+.content-details {
+  background: $brand-primary;
+  color: #212121;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  .detail-block {
+    display: block;
+  }
+}
+
+.homepage-section {
+  margin-bottom: 4em;
+}
 
 .beer-list {
   padding: 15px 30px;

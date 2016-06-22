@@ -9,6 +9,40 @@ use Roots\Sage\Assets;
  */
 function customize_register($wp_customize) {
   $wp_customize->get_setting('blogname')->transport = 'postMessage';
+
+  $wp_customize->add_section( 'abcmaine_options' , array(
+    'title'      => __( 'Airline Brewing Co. Options', 'sage' ),
+    'priority'   => 30,
+  ) );
+
+  $wp_customize->add_setting( 'phone_number' , array(
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'facebook_link' , array(
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'instagram_link' , array(
+    'transport'   => 'refresh',
+  ) );
+
+  $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'abcmaine_phone_number', array(
+  	'label'        => __( 'Main Phone Number', 'sage' ),
+  	'section'    => 'abcmaine_options',
+  	'settings'   => 'phone_number',
+  ) ) );
+  $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'abcmaine_facebook_link', array(
+  	'label'        => __( 'Facebook Link', 'sage' ),
+  	'section'    => 'abcmaine_options',
+  	'settings'   => 'facebook_link',
+    'type'           => 'url',
+  ) ) );
+  $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'abcmaine_instagram_link', array(
+  	'label'        => __( 'Instagram Link', 'sage' ),
+  	'section'    => 'abcmaine_options',
+  	'settings'   => 'instagram_link',
+    'type'           => 'url',
+  ) ) );
+
 }
 add_action('customize_register', __NAMESPACE__ . '\\customize_register');
 

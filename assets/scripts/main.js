@@ -19,6 +19,20 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // Cache elements
+        var $navPrimary = $('.nav-primary');
+        var $navPrimaryLinks = $navPrimary.find('a');
+
+        $('.nav-toggle').toggle(function(){
+          $navPrimary.addClass('nav-primary--visible');
+        }, function(){
+          $navPrimary.removeClass('nav-primary--visible');
+        });
+
+        $navPrimaryLinks.click(function(){
+          $navPrimary.removeClass('nav-primary--visible');
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

@@ -17,7 +17,7 @@ function body_class($classes) {
 
   // Add class if sidebar is active
   if (Setup\display_sidebar()) {
-    $classes[] = 'sidebar-primary';
+    // $classes[] = 'sidebar-primary';
   }
 
   return $classes;
@@ -31,6 +31,23 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+ * Replace permalink slug with #anchor on homepage
+ */
+function main_menu_links( $atts, $item, $args ) {
+  if($item->classes[0] != 'no-anchor'){
+    //if( strpos( $atts['href'], get_site_url() ) !== false ) {
+      if( is_front_page() ) {
+        $pattern = "/([^\/]+(?=\/$|$))(\/)/i";
+        $replacement = "#$1";
+        $atts['href'] = preg_replace($pattern, $replacement, $atts['href']);
+      }
+    //}
+  }
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\main_menu_links', 10, 3 );
 
 function set_custom_edit_beer_columns($columns) {
   unset($columns['date']);

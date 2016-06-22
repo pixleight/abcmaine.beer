@@ -1,0 +1,143 @@
+body {
+  @media (max-width: $screen-xs-max) {
+    margin-top: $mobile-menu-height;
+  }
+}
+
+.main-header {
+  @include make-sm-column($menu-sidebar-sm-columns);
+  @include make-md-column($menu-sidebar-md-columns);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #212121 url(../images/menu-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  @include shadow-10dp();
+
+  @media (max-width: $screen-xs-max) {
+    bottom: auto;
+    right: 0;
+    height: $mobile-menu-height;
+    overflow: visible;
+    background: #212121 url(../images/menu-bg_mobile.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  .brand {
+    display: block;
+    height: 240px;
+    text-indent: 200%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: url(../images/airline-logo.png) top center no-repeat;
+    background: none, url(../images/airline-logo.svg) top center no-repeat;
+    background-size: contain;
+
+    @media (max-width: $screen-xs-max) {
+      height: $mobile-menu-height;
+      background: url(../images/airline-logo_blade_mobile@2x.png) left center no-repeat;
+      background-size: contain;
+      position: relative;
+      @include make-xs-column(8);
+
+      > span {
+        position: absolute;
+        left: 84px;
+        display: block;
+        height: $mobile-menu-height;
+        width: 144px;
+        background: url(../images/airline-logo_text_mobile@2x.png) right center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .nav-toggle {
+    float: right;
+    margin: 15px 15px 0;
+  }
+
+  .nav-primary {
+    @media (max-width: $screen-xs-max) {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: $mobile-menu-height;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(#212121, 0.9);
+
+      &.nav-primary--visible {
+        display: block;
+      }
+    }
+  }
+
+  .nav {
+    >li {
+      >a {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        color: $text-color;
+        font-weight: 300;
+
+        @media (max-width: $screen-xs-max) {
+          font-size: 1.8em;
+          color: $brand-primary;
+        }
+
+        &:hover, &:focus {
+          background: none;
+          color: $brand-primary;
+
+          @media (max-width: $screen-xs-max) {
+            color: #F5F5F5;
+          }
+        }
+      }
+      &.current-menu-item, &.active {
+        > a {
+          box-shadow: inset 12px 0 0 0 $brand-primary;
+
+          @media (max-width: $screen-xs-max) {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-contact {
+    text-align: center;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.3em;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover, &:focus {
+        color: $brand-primary;
+      }
+    }
+
+    .contact-link--phone {
+      font-weight: 300;
+      font-size: 1.5em;
+      display: block;
+      margin: 1em auto 0.25em;
+    }
+
+    .contact-link--icon {
+      display: inline-block;
+      margin: 0.5em;
+    }
+  }
+}
