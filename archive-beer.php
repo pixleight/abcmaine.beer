@@ -1,3 +1,6 @@
+<?php global $query_string;
+query_posts( $query_string . '&orderby=title&order=ASC' ); ?>
+
 <?php get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
