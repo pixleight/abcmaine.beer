@@ -14,6 +14,8 @@ function title() {
     }
   } elseif (is_post_type_archive('beer')) {
     return __('Our Beers', 'sage');
+  } elseif (is_post_type_archive('events')) {
+    return __('Events', 'sage');
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {
@@ -24,3 +26,11 @@ function title() {
     return get_the_title();
   }
 }
+
+function get_the_archive_title( ) {
+  if ( is_post_type_archive() ) {
+    $title = sprintf( __( '%s' ), post_type_archive_title( '', false ) );
+    return $title;
+  }
+}
+add_filter('get_the_archive_title', __NAMESPACE__ . '\\get_the_archive_title' );

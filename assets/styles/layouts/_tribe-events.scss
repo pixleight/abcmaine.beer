@@ -1,0 +1,77 @@
+#tribe-bar-form {
+  background: none;
+
+  .tribe-bar-submit {
+    input[type=submit] {
+      &:hover, &:focus {
+        background: $brand-primary;
+        color: #212121;
+      }
+    }
+  }
+}
+
+  .tribe-bar-views-inner {
+    background: #424242;
+  }
+
+  #tribe-bar-views {
+    .tribe-bar-views-list {
+      .tribe-bar-views-option {
+        a {
+          background: #BDBDBD;
+          &:hover {
+            color: #424242;
+          }
+        }
+      }
+    }
+  }
+
+.tribe-events-list-separator-month {
+  background: #424242;
+}
+
+#tribe-events-content {
+  .tribe-events-calendar td,
+  table.tribe-events-calendar {
+    border-color: #424242;
+  }
+}
+
+  .tribe-events-calendar{
+    th {
+      background: rgba($brand-primary, 0.6);
+      color: #000;
+    }
+
+    div[id*=tribe-events-daynum-],
+    div[id*=tribe-events-daynum-]>a {
+      background: #424242;
+      color: #FFFFFF;
+    }
+
+    td.tribe-events-present {
+      div[id*=tribe-events-daynum-],
+      div[id*=tribe-events-daynum-]>a {
+        background: $brand-primary;
+        color: #424242;
+      }
+    }
+
+  }
+
+.tribe-events-notices {
+  background: $brand-primary;
+  border-radius: 2px;
+  border: 1px solid darken($brand-primary, 40%);
+  color: darken($brand-primary, 30%);
+  text-shadow: 0 1px 0 rgba(#FFF, 0.3);
+}
+
+.single-tribe_events{
+  .tribe-events-event-meta {
+    background: #424242;
+    border-color: #616161;
+  }
+}
