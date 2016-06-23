@@ -1,7 +1,7 @@
 <?php use Roots\Sage\Titles; ?>
 <div class="beer-list">
   <h3>What's on Tap?</h3>
-  <a href="/abcmaine.beer/beer/" class="beer-list--view-all"><span class="beer-list--view-all-text">View all our beers!</span><span class="beer-list--view-all-arrow">&gt;</span></a>
+  <a href="<?= get_home_url(); ?>/beer/" class="beer-list--view-all"><span class="beer-list--view-all-text">View all our beers!</span><span class="beer-list--view-all-arrow">&gt;</span></a>
   <?php
 
   // WP_Query arguments
