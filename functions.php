@@ -10,6 +10,7 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
+  'lib/custom-posts.php', // Custom post types & taxonomies
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
   'lib/setup.php',     // Theme setup

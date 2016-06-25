@@ -11,6 +11,10 @@
   }
 }
 
+  #tribe-bar-collapse-toggle {
+    background: none;
+  }
+
   .tribe-bar-views-inner {
     background: #424242;
   }
@@ -36,6 +40,14 @@
   .tribe-events-calendar td,
   table.tribe-events-calendar {
     border-color: #424242;
+  }
+}
+
+.tribe-events-loop{
+  .tribe-events-event-meta {
+    background: #424242;
+    border-color: #616161;
+    padding: 1em;
   }
 }
 
@@ -70,8 +82,14 @@
 }
 
 .single-tribe_events{
-  .tribe-events-event-meta {
+  .tribe-events-event-meta, .tribe-events-schedule {
     background: #424242;
     border-color: #616161;
+  }
+
+  .tribe-events-schedule {
+    h2 {
+      font-size: 1.4em;
+    }
   }
 }

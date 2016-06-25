@@ -5,6 +5,11 @@
 
   .beer--title {
     font-family: "Rock Salt";
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.5em;
+      margin-bottom: 0.75em;
+    }
     a:hover {
       color: $beer-list--white;
       text-decoration: none;
@@ -15,12 +20,20 @@
     font-family: "Rock Salt";
     color: $beer-list--white;
     margin-bottom: 1em;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 0.8em;
+    }
   }
 
   .beer--details {
     font-size: 1.2em;
     font-weight: 300;
     margin-bottom: 0.5em;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.1em;
+    }
   }
 }
 
